@@ -1,3 +1,79 @@
-body {
-    background-color: red;
+@use 'variables';
+@use 'header';
+@use 'hero';
+@use 'nations';
+@use 'newsletter';
+@use 'footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: variables.$color-bg-dark;
+    color: variables.$color-text-white;
+    font-family: variables.$font-family;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+
+    &--large {
+        width: 100%;
+        height: 3rem;
+        font-size: 1rem;
+
+        @include variables.tablet {
+            width: auto;
+            min-width: 160px;
+        }
+    }
+
+    &--primary {
+        background-color: variables.$color-primary;
+        color: variables.$color-bg-dark;
+
+        &:hover {
+            background-color: variables.$color-primary-hover;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(variables.$color-primary, 0.2);
+        }
+    }
+
+    &--glass {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        color: variables.$color-text-white;
+        backdrop-filter: blur(4px);
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+    }
+}
+

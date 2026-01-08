@@ -1,13 +1,179 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teste</title>
-    <link rel="stylesheet" href="styles/main.scss">
+    <title>FIFA World Cup 2026 Countdown</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/main.scss">
 </head>
 <body>
-    <h1>TESTE 2222222</h1>
-    <script src="scripts/main.js"></script>
+
+    <nav class="navbar">
+        <div class="container navbar__container">
+            <div class="navbar__brand">
+                <span class="material-symbols-outlined icon">sports_soccer</span>
+                <h2 class="title">FIFA World Cup 26™</h2>
+            </div>
+
+            <div class="navbar__menu" id="navbarMenu">
+                <div class="navbar__links">
+                    <a href="#">Hosts</a>
+                    <a href="#">News</a>
+                    <a href="#">Partners</a>
+                </div>
+                <button class="btn btn--primary">Get Tickets</button>
+            </div>
+
+            <button class="navbar__toggle" id="menuToggle">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero__bg">
+             <div class="hero__bg-img" style="background-image: url('./images/hero.png');"></div>
+             <div class="hero__overlay"></div>
+        </div>
+
+        <div class="container hero__content">
+            <div class="badge">
+                <span class="badge__dot"></span>
+                <span class="badge__text">UNofficial Countdown</span>
+            </div>
+
+            <h1 class="hero__title">
+                THE WORLD CUP<br>
+                IS <span class="highlight">COMING</span>.
+            </h1>
+            
+            <p class="hero__subtitle">North America | June 2026</p>
+
+            <div class="countdown" id="countdown">
+                <div class="countdown__item">
+                    <div class="countdown__box"><span id="days">00</span></div>
+                    <span class="countdown__label">Days</span>
+                </div>
+                <div class="countdown__separator">:</div>
+                <div class="countdown__item">
+                    <div class="countdown__box"><span id="hours">00</span></div>
+                    <span class="countdown__label">Hours</span>
+                </div>
+                <div class="countdown__separator">:</div>
+                <div class="countdown__item">
+                    <div class="countdown__box"><span id="minutes">00</span></div>
+                    <span class="countdown__label">Mins</span>
+                </div>
+                <div class="countdown__separator">:</div>
+                <div class="countdown__item">
+                    <div class="countdown__box countdown__box--active"><span id="seconds">00</span></div>
+                    <span class="countdown__label highlight">Secs</span>
+                </div>
+            </div>
+
+            <div class="hero__actions">
+                <button class="btn btn--primary btn--large">Get Notify</button>
+                <button class="btn btn--glass btn--large">Watch Trailer</button>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <a href="#nations"><span class="material-symbols-outlined">keyboard_arrow_down</span></a>
+        </div>
+    </header>
+
+    <section class="intro" id="nations">
+        <div class="container intro__container">
+            <h2 class="section-tag">The Host Nations</h2>
+            <h3 class="section-title">Three Nations. <br class="mobile-break"> One Goal.</h3>
+            <p class="section-desc">
+                For the first time in history, the FIFA World Cup™ will be shared by three host nations. Experience the diverse cultures, iconic stadiums, and passionate fanbases of the United States, Mexico, and Canada.
+            </p>
+        </div>
+    </section>
+
+    <section class="nations">
+        <div class="container">
+            <div class="nations__grid">
+                <article class="card">
+                    <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?q=80&w=2099&auto=format&fit=crop');"></div>
+                    <div class="card__flag"><span class="material-symbols-outlined">flag</span></div>
+                    <div class="card__content">
+                        <h4>United States</h4>
+                        <p>From New York to Los Angeles, experience iconic American venues across 11 vibrant host cities.</p>
+                        <a href="#" class="card__link">Explore Cities <span class="material-symbols-outlined">arrow_forward</span></a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="card__flag"><span class="material-symbols-outlined">flag</span></div>
+                    <div class="card__content">
+                        <h4>Mexico</h4>
+                        <p>History meets passion in Mexico's legendary football cathedrals. The spirit of the game lives here.</p>
+                        <a href="#" class="card__link">Explore Cities <span class="material-symbols-outlined">arrow_forward</span></a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=1965&auto=format&fit=crop');"></div>
+                     <div class="card__flag"><span class="material-symbols-outlined">flag</span></div>
+                    <div class="card__content">
+                        <h4>Canada</h4>
+                        <p>Witness the northern lights of football. Vancouver and Toronto welcome the world with open arms.</p>
+                        <a href="#" class="card__link">Explore Cities <span class="material-symbols-outlined">arrow_forward</span></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter__box">
+                <div class="newsletter__bg-blur"></div>
+                <div class="newsletter__content">
+                    <div class="newsletter__text">
+                        <h3>DON'T MISS THE KICKOFF</h3>
+                        <p>Join the official mailing list for ticket pre-sales, match schedules, and exclusive event updates.</p>
+                    </div>
+                    <form class="newsletter__form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter your email address">
+                            <span class="material-symbols-outlined input-icon">mail</span>
+                        </div>
+                        <button type="button" class="btn btn--primary">Sign Up Now</button>
+                        <small>By signing up, you agree to our Terms & Privacy Policy.</small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <span class="material-symbols-outlined">sports_soccer</span>
+                <span>FIFA</span>
+            </div>
+            <div class="footer__links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer__copy">
+                © 2024 FIFA. All rights reserved. The word "FIFA", "World Cup", and the official logos are trademarks of the Fédération Internationale de Football Association.
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
