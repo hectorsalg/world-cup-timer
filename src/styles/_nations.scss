@@ -78,16 +78,6 @@
     &:hover {
         border-color: variables.$color-primary;
         box-shadow: 0 0 30px rgba(variables.$color-primary, 0.1);
-
-        .card__image {
-            transform: scale(1.1);
-        }
-
-        .card__link {
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 4px;
-        }
     }
 
     &__image {
@@ -156,6 +146,7 @@
         letter-spacing: 0.05em;
 
         span {
+            text-decoration: none;
             font-size: 1.125rem;
             margin-left: 0.25rem;
         }
